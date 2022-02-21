@@ -22,7 +22,7 @@ set -euox pipefail
 MMDC_EXTRA_ARGS="${MMDC_EXTRA_ARGS:-}"
 
 function main {
-  tree -a /node_modules
+  ls -laR /node_modules
   printf "Using MMDC version %s\n" "$(/node_modules/.bin/mmdc -V)"
 
   outpath="${1}"
