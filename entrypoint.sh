@@ -16,12 +16,13 @@
 #   3) compile the mermaid to the directory *.md.<n>.mermaid.${output_file_type}
 #   4) place a reference to the compiled image in the markdown
 
-set -euo pipefail
+set -euox pipefail
 
 # Normalize some environment variables (default values)
 MMDC_EXTRA_ARGS="${MMDC_EXTRA_ARGS:-}"
 
 function main {
+  tree -a /node_modules
   printf "Using MMDC version %s\n" "$(/node_modules/.bin/mmdc -V)"
 
   outpath="${1}"
