@@ -5,4 +5,5 @@ COPY . /mmdc
 
 ENV ENTRYPOINT_PATH /mmdc
 
-CMD [ "/mmdc", "--help" ]
+ENTRYPOINT [ "/mmdc/entrypoint.sh" ]
+CMD [ "--help" ]
