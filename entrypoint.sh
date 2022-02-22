@@ -24,7 +24,7 @@ MMDC_EXTRA_ARGS="${MMDC_EXTRA_ARGS:-}"
 function main {
   ls -la /
   ls -la /mmdc
-  find . -name 'mmdc'
+  echo "Kva har eg funne: $(find . -name 'mmdc' | tr ' ' '\n' )"
   printf "Using MMDC version in node_modules/: %s\n" "$(/node_modules/.bin/mmdc -V)"
   printf "Using MMDC version in mmdc/: %s\n" "$(/mmdc/mmdc -V)"
 
