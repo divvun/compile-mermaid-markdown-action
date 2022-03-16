@@ -20,13 +20,11 @@ set -euox pipefail
 
 # Normalize some environment variables (default values)
 MMDC_EXTRA_ARGS="${MMDC_EXTRA_ARGS:-}"
+MMDC_PATH=/home/mermaidcli/node_modules/.bin/mmdc
+ENTRYPOINT_PATH=/
 
 function main {
-  ls -la /
-  ls -la /mmdc
-  echo "Kva har eg funne: $(find . -name 'mmdc' | tr ' ' '\n' )"
-  printf "Using MMDC version in node_modules/: %s\n" "$(/node_modules/.bin/mmdc -V)"
-  printf "Using MMDC version in mmdc/: %s\n" "$(/mmdc/mmdc -V)"
+  printf "Using MMDC version in node_modules/: %s\n" "$(${MMDC_PATH} -V)"
 
   outpath="${1}"
   mkdir -p "${outpath}"
@@ -85,7 +83,7 @@ function c_mermaid {
   printf "Compiling: %s\n" "${1}"
   printf "Output to: %s\n" "${2}"
   printf "Extra args: %s\n" "${MMDC_EXTRA_ARGS}"
-  /node_modules/.bin/mmdc -p /mmdc/puppeteer-config.json -i "${1}" -o "${2}" ${MMDC_EXTRA_ARGS}
+  ${MMDC_PATH} -p /puppeteer-config.json -i "${1}" -o "${2}" ${MMDC_EXTRA_ARGS}
   confirm_creation "${2}"
 }
 

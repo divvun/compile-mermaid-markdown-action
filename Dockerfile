@@ -1,9 +1,5 @@
-FROM minlag/mermaid-cli AS mermaid
+FROM minlag/mermaid-cli
 
-WORKDIR /mmdc
-COPY --from=mermaid . /mmdc
-
-ENV ENTRYPOINT_PATH="/mmdc"
-
-ENTRYPOINT [ "/mmdc/entrypoint.sh" ]
-CMD [ "--help" ]
+COPY entrypoint.sh /
+COPY insert-markdown.awk /
+ENTRYPOINT ["/entrypoint.sh"]
