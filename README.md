@@ -1,6 +1,6 @@
-> NOTICE: Github has publicly released mermaid support for most of their services. Unfortunately it does not include support for GH Pages. This action add that.
+> NOTICE: Github has publicly released mermaid support for most of their services. Unfortunately it does not include support for GH Pages. This action adds that.
 
-> NOTICE 2: The [original author](https://github.com/neenjaw/compile-mermaid-markdown-action) decided to archive this project after GitHub released their mermaid support. This repo continues the original work for the reason given above.
+> NOTICE 2: The [original author](https://github.com/neenjaw/compile-mermaid-markdown-action) decided to archive this project after GitHub released their mermaid support. This repo continues the original work for the reason given in the first NOTICE.
 
 # compile-mermaid-markdown-action
 
@@ -10,11 +10,11 @@ Markdown is a common way to present useful information with rich formatting from
 
 [Mermaid-JS](https://mermaid-js.github.io/mermaid/) takes this philosophy and applies it to graphs! Taking simple human-readable syntax and returning rich graphs.
 
-Github markdown does not automatically render mermaid to the browser, so this action does that for you so you can just worry about the markdown and not the toolchain.
+Github markdown does not automatically render mermaid to the browser, so this action does that for you so you can just worry about the markdown and not the toolchain. It grabs the latest Mermaid release, ensuring feature parity with the official Mermaid releases.
 
 ## Contributing
 
-Looking for suggestions/help in improving this action. If there is a feature you want, or you encounter a bug, please [open an issue](https://github.com/divvun/compile-mermaid-markdown-action/issues).
+Looking for suggestions/help in improving this action. If there is a feature you want, or you encounter a bug, please [open an issue](https://github.com/divvun/compile-mermaid-markdown-action/issues), or fork and submit a pull request.
 
 ## How to use
 
