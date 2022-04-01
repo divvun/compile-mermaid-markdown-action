@@ -1,5 +1,5 @@
-name: 'Compile Mermaid Markdown'
-description: '*.mermaid, *.mmd files or *.md with mermaid codeblocks and compile them'
+name: 'Compile Mermaid in Markdown'
+description: 'Compile *.mermaid, *.mmd files or *.md with mermaid codeblocks and output svg'
 branding:
   icon: 'grid'
   color: 'green'
