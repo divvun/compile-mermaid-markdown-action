@@ -1,6 +1,8 @@
-> NOTICE: Github has publicly added mermaid support to their roadmap to support ([ref](https://github.com/github/roadmap/issues/372)).  When it is released, this action will be archived and removed from the market place.
+> NOTICE: Github has publicly released mermaid support for most of their services. Unfortunately it does not include support for GH Pages. This action add that.
 
-# compile-mermaid-markdown-action (beta)
+> NOTICE 2: The [original author](https://github.com/neenjaw/compile-mermaid-markdown-action) decided to archive this project after GitHub released their mermaid support. This repo continues the original work for the reason given above.
+
+# compile-mermaid-markdown-action
 
 ## Purpose
 
@@ -12,7 +14,7 @@ Github markdown does not automatically render mermaid to the browser, so this ac
 
 ## Contributing
 
-Looking for suggestions/help in improving this action. If there is a feature you want, or you encounter a bug, please let me know and we can work together to improve it.
+Looking for suggestions/help in improving this action. If there is a feature you want, or you encounter a bug, please [open an issue](https://github.com/divvun/compile-mermaid-markdown-action/issues).
 
 ## How to use
 
