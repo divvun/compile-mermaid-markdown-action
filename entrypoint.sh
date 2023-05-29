@@ -131,6 +131,9 @@ function c_md_mermaid {
     image_relative_path=$(realpath --relative-to="${input_dir}" "${output_path}/${dasherized}-${block_count}.${output_file_type}")
     image_absolute_path="/${output_path}/${dasherized}-${block_count}.${output_file_type}"
 
+    printf "Rel image path: %s\n" "${image_relative_path}"
+    printf "Abs image path: %s\n" "${image_absolute_path}"
+
     if [[ -z "${ABSOLUTE_IMAGE_LINKS}" ]]; then
       image_path="${image_relative_path}"
     else
