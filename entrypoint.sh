@@ -134,11 +134,12 @@ function c_md_mermaid {
     ls -l
     printf "Input dir ${input_dir}"
     printf "Target filename: ${output_path}/${dasherized}-${block_count}.${output_file_type}"
+    realpath-xpack --help
     realpath --help
     sleep 2
 
     # Compute relative path from the markdown to the tmp_dir
-    image_relative_path=$(python -c "import os.path; print(os.path.relpath(\"${input_dir}\" \"${output_path}/${dasherized}-${block_count}.${output_file_type}\"))" )
+    image_relative_path=$(realpath-xpack --relative-to="${input_dir}" "${output_path}/${dasherized}-${block_count}.${output_file_type}")
     image_absolute_path="/${output_path}/${dasherized}-${block_count}.${output_file_type}"
 
     printf "Rel image path: %s\n" "${image_relative_path}"
