@@ -128,11 +128,13 @@ function c_md_mermaid {
     c_mermaid "${block_file}-${block_count}" "${output_path}/${dasherized}-${block_count}.${output_file_type}"
 
     # Debug:
+    sleep 2
     printf "**** DEBUG ****"
     pwd
     ls -l
     printf "Input dir ${input_dir}"
     printf "Target filename: ${output_path}/${dasherized}-${block_count}.${output_file_type}"
+    sleep 2
 
     # Compute relative path from the markdown to the tmp_dir
     image_relative_path=$(realpath --relative-to="${input_dir}" "${output_path}/${dasherized}-${block_count}.${output_file_type}")
